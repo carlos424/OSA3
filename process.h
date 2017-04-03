@@ -39,5 +39,6 @@ public:
   void displayInfo();
   
   int getPriority();
+  int getIOBurst();
 };
 #endif

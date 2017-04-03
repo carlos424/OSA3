@@ -90,6 +90,7 @@ void Scheduler::run()
       }
       if(reportInput == 2)
       {
+		  tempProcess.setPriority(tempProcess.getIOBurst());
 		  readyQueue2.insertProc(tempProcess);
       }
     }

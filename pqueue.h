@@ -17,7 +17,7 @@
 
 using namespace std;
 
-class pqueue
+class PQueue
 {
 	private:
 		int numberOfProc;
@@ -28,7 +28,7 @@ class pqueue
 
 	
 	public:
-
+		PQueue();
 
 		int size();
 		void insertProc(Process newProc);

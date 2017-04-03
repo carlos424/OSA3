@@ -3,7 +3,7 @@
 //
 //
 //Purpose
-//Create a priority pqueue
+//Create a priority PQueue
 
 #ifndef pqueue_CPP
 #define pqueue_CPP
@@ -13,20 +13,20 @@
 
 
 
-
+PQueue::PQueue()
+{
 	int rear = 0;
 	int front = -1;
 	int numberOfProc = 0;
-
+}
 	
-	
 
-int pqueue::size()
+int PQueue::size()
 {
 	return numberOfProc;
 }
 
-void pqueue::insertProc(Process newProc)
+void PQueue::insertProc(Process newProc)
 {
 	if(numberOfProc == 100)
 	{
@@ -50,7 +50,7 @@ void pqueue::insertProc(Process newProc)
 	
 }
 
-Process pqueue::removeProc()
+Process PQueue::removeProc()
 {
 	if (numberOfProc == 0)
 	{
@@ -69,7 +69,7 @@ Process pqueue::removeProc()
 
 }
 
-void pqueue::display()
+void PQueue::display()
 {
 	if (numberOfProc == 0)
 	{
@@ -91,13 +91,13 @@ void pqueue::display()
 
 }
 
-void pqueue::sort()
+void PQueue::sort()
 {
 	for (int i = front;i<numberOfProc ;i++ )
 	{
 		for (int x = i+1;x<numberOfProc ;x++ )
 		{
-			if (tree[i].getPriority() < tree[x].getPriority())
+			if (tree[i].getPriority() > tree[x].getPriority())
 			{
 				Process swap = tree[i];
 				tree[i] = tree[x];
@@ -107,7 +107,7 @@ void pqueue::sort()
 	}
 }
 
-Process pqueue::removeRandProc(int i)
+Process PQueue::removeRandProc(int i)
 {
 	if (numberOfProc == 0)
 	{
@@ -126,7 +126,7 @@ Process pqueue::removeRandProc(int i)
 	}
 }
 
-bool pqueue::inQueue(Process temp)
+bool PQueue::inQueue(Process temp)
 {
 	if (numberOfProc == 0)
 	{
@@ -147,7 +147,7 @@ bool pqueue::inQueue(Process temp)
 }
 
 
-Process pqueue::Top()
+Process PQueue::Top()
 {
 	return tree[front];
 }

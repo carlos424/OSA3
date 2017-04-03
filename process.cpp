@@ -106,4 +106,11 @@ int Process::getPriority()
 {
 	return priority;
 }
+
+int Process::getIOBurst()
+{
+	return IOburst;
+}
+
+
 #endif 

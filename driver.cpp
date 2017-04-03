@@ -16,7 +16,7 @@ int main()
   int processInput;
   int reportInput;
     
-  cout << "How many processes would you like to simulate?> ";
+  cout << "How many processes would you like to simulate?";
   cin >> processInput;
   cout << endl << "Please select report: "
   << endl << "1 - First come first serve" 
@@ -27,6 +27,8 @@ int main()
 
   Scheduler simulation(processInput, reportInput);
   simulation.run();
+  
+
   
   return 0;
 
