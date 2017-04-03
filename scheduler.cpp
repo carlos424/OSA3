@@ -14,6 +14,8 @@
 #include "process.h"
 #include "pqueue.h"
 
+PQueue readyQueue2;
+
 Scheduler::Scheduler()
 {
   cpuState = true; 

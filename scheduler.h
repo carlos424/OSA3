@@ -18,7 +18,6 @@ private:
   int processInput;
   int reportInput;
  queue<Process> readyQueue; 
- pqueue readyQueue2;
  queue<Event> eventQueue;
 
 public:  
